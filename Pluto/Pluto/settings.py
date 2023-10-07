@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "App"
+    "Pluto_Backend"
 ]
 
 MIDDLEWARE = [
@@ -71,6 +71,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "Pluto.wsgi.application"
 
+
+AUTH_USER_MODEL = "Pluto_Backend.User"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -119,8 +121,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    BASE_DIR / "dist",
-    BASE_DIR / "public",
+    BASE_DIR / "../Pluto-Frontend/dist",
+    BASE_DIR / "../Pluto-Frontend/public",
 ]
 
 STATIC_ROOT = BASE_DIR / "static"
