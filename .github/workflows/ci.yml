@@ -8,6 +8,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run Django unit tests
       run: |
-        pip3 install --user django
+        pip3 install -r requirements.txt
         python3 Pluto/manage.py test
     
