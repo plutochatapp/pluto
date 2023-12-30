@@ -12,11 +12,11 @@ const query = gql`
 
 function App() {
     const { loading, error, data } = useQuery(query);
-    useEffect(() => {
-        console.log(data);
-    })
-
-    return 
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error...</p>
+    else {
+        return <p>{data.allSamples[0].sampleText}</p>
+    }
 }
 
 export default App
