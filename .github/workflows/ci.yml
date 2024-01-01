@@ -1,13 +1,12 @@
 name: Testing
 on: push
 
-jobs:
-  test_sample:
+jobs: 
+  testing_backend:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run Django unit tests
+    - name: Run Django unit tests  
       run: |
-        pip3 install -r requirements.txt
-        python3 Pluto/manage.py test
-    
+        pip3 install -r requirements.txt  
+        python3 Pluto/manage.py test  
