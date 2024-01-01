@@ -9,4 +9,4 @@ jobs:
     - name: Run Django unit tests  
       run: |
         pip3 install -r requirements.txt  
-        python3 manage.py test  
+        python3 Pluto/manage.py test  
