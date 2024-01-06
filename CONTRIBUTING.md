@@ -31,7 +31,8 @@ Welcome to Pluto! We appreciate and welcome contribution on our project, your co
 8. After finishing the changes, you have just to checkout to beta branch and commit the changes and push the changes to your forked repository.
 9. Checkout/Switch to the beta branch by running `git checkout -b beta` as we recommend making changes in the beta branch and later propose the changes to the main branch. 
 
-    > **Warning:** If you committed your changes to the main branch then your changes will not be accepted!
+> [!WARNING]
+> If you committed your changes to the main branch then your changes will not be accepted!
 
 10. Then add and commit your changes and push it to your forked repository
 11. After pushing the changes to your forked repository, create a pull request from your forked repository to the main repository and be sure to also mention the issue using `#` (i.e. `#15`) in the pull request's name itself. 
@@ -43,7 +44,8 @@ Welcome to Pluto! We appreciate and welcome contribution on our project, your co
 ## Code of Conduct 
 We appreciate if all the contributions to follow the [`CODE_OF_CONDUCT`](./CODE_OF_CONDUCT.md) to help us build a better community!
 
-> **Note:** If you like the repository and our work then why not star our repository to show support!
+> [!NOTE]
+> If you like the repository and our work then why not star our repository to show support!
 
 <br>
 Once again we thank everyone who have contributed to this project by far and we also appreciate the ones who will contribute to this project in the future!
