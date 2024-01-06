@@ -11,7 +11,7 @@ Welcome to Pluto! We appreciate and welcome contribution on our project, your co
 5. Navigate to the `Pluto-Frontend` directory using `cd Pluto-Frontend`.
 6. Then run `npm install` (or) `yarn install` to install all dependencies for the frontend.
 7. Now navigate to `Pluto` directory using `cd Pluto`.
-8. Then run `python3 manage.py makemigrations` to make migrations in the database and `python3 manage.py migrate` to migrate the changes .
+8. Then run `python3 manage.py makemigrations` to make migrations in the database and `python3 manage.py migrate` to migrate the changes.
 9. Now open two terminals for running the backend and frontend simultaneously due to the fact that both backend and frontend should be running at the same time in order for the web app to work.
 10. In the first terminal, navigate to `Pluto` directory using `cd Pluto` and run `python3 manage.py runserver` to run the django backend server.
 11. Then in the second terminal, navigate to `Pluto-Frontend` directory using `cd Pluto-Frontend` and run `npm run dev`.
