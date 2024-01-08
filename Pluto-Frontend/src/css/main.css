@@ -1,0 +1,7 @@
+body {
+    margin: 0px !important;
+    background-color: black;
+    min-height: 100vh;
+    min-width: 320px;
+    overflow: hidden;
+}
