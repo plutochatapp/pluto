@@ -5,7 +5,11 @@ Welcome to Pluto! We appreciate and welcome contribution on our project, your co
 ## Setup the Project locally
 
 1. Fork this repository into your Github account.
-2. Clone the forked repository in your local system.
+2. Clone the forked repository in your local system using `git clone -b beta https://github.com/USERNAME/Pluto.git` where `USERNAME` is your actual github username.
+
+> [!WARNING]
+> Do not use normal `git clone https://github.com/USERNAME/Pluto.git` since it will directly clone the main branch of your forked repository and while the main branch is the stable version of the web app and beta branch is actually the development branch and that is where all the new changes will be committed.
+
 3. Create a virtual environment *(if needed)*.
 4. Run `pip3 install -r requirements.txt` (or) `poetry install` to install all dependencies for the backend.
 5. Navigate to the `Pluto-Frontend` directory using `cd Pluto-Frontend`.
@@ -21,7 +25,7 @@ Welcome to Pluto! We appreciate and welcome contribution on our project, your co
 
 ## Guide on Contributing to this Project
 
-1. You can always find issues tagged "good first issue", those issues can be done easily by the new contributors.
+1. You can always find issues tagged "good first issue", those issues can be suitable for the new contributors.
 2. After finding an issue to work on, first off check if there is any assignees already.
 3. Then read the description of the issue and almost every comment on the issue which could  be helpful to work on.
 4. Finally *(if there are any assignees already)* ping/CC them in the issue comments to ask and discuss about their current progress and knowledge on the issue which will be extremely helpful for your work.
@@ -29,7 +33,7 @@ Welcome to Pluto! We appreciate and welcome contribution on our project, your co
 6. While working on the project, be sure that in case you create or edit a model in [`models.py`](./Pluto/Pluto_Backend/models.py) you also have to update the [`schema.py`](./Pluto/Pluto_Backend/schema.py) to enable the frontend to fetch the model you created or edited. you can find [the docs](https://docs.graphene-python.org/projects/django/en/latest/schema/) of `graphene-django` helpful. 
 7. You also have to update or create *(if applicable)* the test cases in [`tests.py`](./Pluto/Pluto_Backend/tests.py) when you create or edit a model in [`models.py`](./Pluto/Pluto_Backend/models.py).
 8. After finishing the changes, you have just to checkout to beta branch and commit the changes and push the changes to your forked repository.
-9. Checkout/Switch to the beta branch by running `git checkout -b beta` as we recommend making changes in the beta branch and later propose the changes to the main branch. 
+9. Checkout/Switch to the beta branch by running `git checkout -b beta` as the beta branch is the development version of the web app while main branch is the stable version of the web app.
 
 > [!WARNING]
 > If you committed your changes to the main branch then your changes will not be accepted!
