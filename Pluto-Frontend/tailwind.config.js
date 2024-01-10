@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
     "./src/**/*.js",
     "./src/**/*.jsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+            'navbar-color': '#161616',
+            'navbar-btn-color': '#252525',
+        },
+    },
   },
   plugins: [],
 }
