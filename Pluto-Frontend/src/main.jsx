@@ -5,7 +5,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import App from './components/App.jsx'
 import Navbar from './components/Navbar.jsx'
 
-import './css/main.css'
+import './css/index.css'
 
 let client = new ApolloClient({
     uri: 'http://127.0.0.1:8000/graphql/',

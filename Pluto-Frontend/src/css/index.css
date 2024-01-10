@@ -1,0 +1,17 @@
+/* body {
+    margin: 0px !important;
+    background-color: black;
+    min-height: 100vh;
+    min-width: 320px;
+    overflow: hidden;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply m-0 bg-black min-h-screen min-w-[320px] overflow-hidden;
+    }
+}
