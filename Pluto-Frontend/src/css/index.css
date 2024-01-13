@@ -15,3 +15,12 @@
         @apply m-0 bg-black min-h-screen min-w-[320px] overflow-hidden;
     }
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
