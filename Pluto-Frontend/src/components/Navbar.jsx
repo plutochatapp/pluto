@@ -13,22 +13,12 @@ function Navbar() {
                     <img style={{ width: '27px', height: '48px', marginLeft: '10px', marginRight: '10px' }} id='dm-btn-icon' src={dmBtnIcon}></img>
                 </button>
 
-                <div style={{ height: '616px' }} className='flex flex-col justify-start items-center w-full mb-3 px-2 border-y-2 border-solid border-y-navbar-btn-color overflow-x-hidden overflow-y-auto scrollbar-hide'>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mt-3 mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer mb-3'></button>
+                <div style={{ height: '616px' }} className='flex flex-col items-center space-y-3 w-full mb-3 px-2 border-y-2 border-solid border-y-navbar-btn-color overflow-x-hidden overflow-y-auto scrollbar-hide'>
+                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mt-3'></button>
+                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></button>
+                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></button>
+                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></button>
+                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mb-3'></button>
                 </div>
 
                 <button className='bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !p-0' id='settings-btn'>
