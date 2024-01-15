@@ -35,15 +35,15 @@ function Navbar() {
                     
                     {data.allGroupsOfUser.map((item, index) => {
                         if (index === 0) {
-                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mt-3'></img>
+                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mt-3 hover:opacity-90'></img>
                         }
 
                         if ((index + 1) === data.allGroupsOfUser.length) {
-                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mb-3'></img>
+                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mb-3 hover:opacity-90'></img>
                         }
 
                         else {
-                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></img>
+                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer hover:opacity-90'></img>
                         }
                     })}
                     
