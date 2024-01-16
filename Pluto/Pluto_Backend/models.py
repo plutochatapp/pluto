@@ -16,3 +16,12 @@ class Message(models.Model):
     content = models.TextField(blank=True)
     reply = models.ForeignKey("self", on_delete=models.CASCADE, related_name="replying_message", null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add=True)
+
+class Hub(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="hub_owner")
+    name = models.CharField(max_length=200, null=False, blank=False, default="")
+    description = models.TextField(blank=True, null=True, max_length=1000)
+    hub_icon = models.URLField(null=False, blank=True)
+    admins = models.ManyToManyField(User, null=True, blank=True, related_name="admins")
+    members = models.ManyToManyField(User, null=False, related_name="members")
+    timestamp = models.DateTimeField(auto_now_add=True)

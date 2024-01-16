@@ -3,4 +3,4 @@
 </div>
 
 
-<h3 align=center>Pluto is a chat-app where people can chat and make guilds/groups for people to hangout together.</h3>
+<h3 align=center>Pluto is a chat-app where people can create hubs in which people can chat and hangout together.</h3>
