@@ -18,10 +18,10 @@ const query = gql`
 function Navbar() {
     const { loading, error, data } = useQuery(query);
     if (loading) {
-        return 'Loading...';
+        return 
     }
     if (error) {
-        return 'Error!!';
+        return 
     }
 
     return (
@@ -46,12 +46,6 @@ function Navbar() {
                             return <img key={index} src={item.hubIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer hover:opacity-90'></img>
                         }
                     })}
-                    
-                    {/* <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mt-3'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer'></button>
-                    <button className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mb-3'></button> */}
                 </div>
 
                 <button className='bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !p-0' id='settings-btn'>

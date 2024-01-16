@@ -36,7 +36,9 @@ class Query(graphene.ObjectType):
         return hubs
     def resolve_user(root, info, id=None, username=None, email=None): 
         if id: return User.objects.get(id=id)
-        if username: return User.objects.get(username=username)
+        if username: 
+            if username == "currentUser": return User.objects.get(username=info.context.user.username)
+            else: return User.objects.get(username=username)
         if email: return User.objects.get(email=email)
         return None
     def resolve_message(root, info, id):

@@ -1,25 +1,32 @@
-import { useEffect } from 'react'
-import { useQuery, gql } from '@apollo/client';
+import { useEffect, useState } from 'react'
+import { useQuery, gql } from '@apollo/client'
 
-// const query = gql`
-//     query MyQuery {
-//         allUsers {
-//             username
-//         }
-//     }
-// `;
+import Navbar from './Navbar.jsx'
+
+// Send a query to get the current user's username
+const query = gql`
+    query checkUserLoggedIn {
+        user(username:"currentUser") {
+            username
+        }
+    }
+`
 
 function App() {
-    // const { loading, error, data } = useQuery(query);
-    // if (loading) return <p>Loading...</p>
-    // if (error) return <p>Error...</p>
-    // else {
-    //     return <p>{data.allUsers[0].username}</p>
-    // }
-
-    return 
-        <>
-        </>
+    const { loading, error, data } = useQuery(query);
+    // If loading display a buffer 
+    if (loading) {}
+    // If error display a modal saying "unknown error"
+    if (error) {}
+    // Else 
+    else {
+        return (
+            <>
+                <Navbar />
+            </>
+        )
+        
+    }
 }
 
 export default App
