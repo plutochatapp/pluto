@@ -8,9 +8,9 @@ const settingsBtnIcon = "/static/settings_btn_icon.svg"
 
 const query = gql`
     query MyQuery {
-        allGroupsOfUser(member:"currentUser") {
+        allHubsOfUser(member:"currentUser") {
             name
-            groupIcon
+            hubIcon
         } 
     }
 `
@@ -33,17 +33,17 @@ function Navbar() {
 
                 <div style={{ height: '616px' }} className='flex flex-col items-center space-y-3 w-full mb-3 px-2 border-y-2 border-solid border-y-navbar-btn-color overflow-x-hidden overflow-y-auto scrollbar-hide'>
                     
-                    {data.allGroupsOfUser.map((item, index) => {
+                    {data.allHubsOfUser.map((item, index) => {
                         if (index === 0) {
-                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mt-3 hover:opacity-90'></img>
+                            return <img key={index} src={item.hubIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mt-3 hover:opacity-90'></img>
                         }
 
-                        if ((index + 1) === data.allGroupsOfUser.length) {
-                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mb-3 hover:opacity-90'></img>
+                        if ((index + 1) === data.allHubsOfUser.length) {
+                            return <img key={index} src={item.hubIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer !mb-3 hover:opacity-90'></img>
                         }
 
                         else {
-                            return <img key={index} src={item.groupIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer hover:opacity-90'></img>
+                            return <img key={index} src={item.hubIcon} alt={item.name} className='flex-shrink-0 bg-navbar-btn-color w-12 h-12 border-none rounded-lg outline-none cursor-pointer hover:opacity-90'></img>
                         }
                     })}
                     
