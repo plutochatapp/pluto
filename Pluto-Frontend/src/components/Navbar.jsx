@@ -3,7 +3,6 @@ import { useQuery, gql } from '@apollo/client'
 
 // SVG Image Paths
 const dmBtnIcon = "/static/dm_btn_icon.svg" 
-const groupBtnIcon = "/static/group_btn_icon.svg" 
 const settingsBtnIcon = "/static/settings_btn_icon.svg" 
 
 const query = gql`
