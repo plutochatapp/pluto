@@ -17,7 +17,7 @@ function Loginform() {
                 <p className="text-white text-xl font-bold text-center font-ubuntu">Log In</p>
                 <form className='flex flex-col mt-4'>
                     <label className='text-white text-md font-ubuntu ml-1'>Email: </label>
-                    <input type='email' className='bg-navbar-btn-color rounded-md mt-2 w-full p-2 px-4 cursor-text text-stone-300 text-sm outline-none mb-4 placeholder:text-stone-500' placeholder='John' id='email-input'></input>
+                    <input type='email' className='bg-navbar-btn-color rounded-md mt-2 w-full p-2 px-4 cursor-text text-stone-300 text-sm outline-none mb-4 placeholder:text-stone-500' placeholder='john@email.com' id='email-input'></input>
                     <label className='text-white text-md font-ubuntu ml-1'>Password: </label>
                     <div className='flex flex-row bg-navbar-btn-color rounded-md mt-2 p-2 px-4 w-full mb-7 justify-between'>
                         <input type={passwordShowing ? 'text' : 'password'} className='bg-navbar-btn-color w-full cursor-text text-stone-300 text-sm outline-none placeholder:text-stone-500' placeholder='johnlovescats' id='password-input'></input>
