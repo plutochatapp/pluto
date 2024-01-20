@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useQuery, gql } from '@apollo/client'
 
 import Navbar from './Navbar.jsx'
+import Loginform from './Loginform.jsx';
 
 // Send a query to get the current user's username
 const query = gql`
@@ -15,9 +16,17 @@ const query = gql`
 function App() {
     const { loading, error, data } = useQuery(query);
     // If loading display a buffer 
-    if (loading) {}
-    // If error display a modal saying "unknown error"
-    if (error) {}
+    if (loading) {
+        return <p>Loading...</p>
+    }
+    // If error, it means that the user is not logged in
+    if (error) {
+        return (
+            <>
+                <Loginform />
+            </>
+        )
+    }
     // Else 
     else {
         return (

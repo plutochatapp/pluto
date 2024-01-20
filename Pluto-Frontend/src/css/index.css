@@ -1,14 +1,8 @@
-/* body {
-    margin: 0px !important;
-    background-color: black;
-    min-height: 100vh;
-    min-width: 320px;
-    overflow: hidden;
-} */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&family=Ubuntu&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
     body {
