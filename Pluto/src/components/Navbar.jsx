@@ -1,28 +1,13 @@
 import '../css/index.css'
-import { useQuery, gql } from '@apollo/client'
+
 
 // SVG Image Paths
-const dmBtnIcon = "/static/dm_btn_icon.svg" 
-const settingsBtnIcon = "/static/settings_btn_icon.svg" 
+const dmBtnIcon = "../assets/dm_btn_icon.svg" 
+const settingsBtnIcon = "../assets/settings_btn_icon.svg" 
 
-const query = gql`
-    query MyQuery {
-        allHubsOfUser(member:"currentUser") {
-            name
-            hubIcon
-        } 
-    }
-`
+
 
 function Navbar() {
-    const { loading, error, data } = useQuery(query);
-    if (loading) {
-        return 
-    }
-    if (error) {
-        return 
-    }
-
     return (
         <>
             <div style={{ width: '70px' }} className='flex flex-col items-center bg-navbar-color min-h-screen pt-5 pb-5'>
