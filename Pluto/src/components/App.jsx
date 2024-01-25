@@ -16,8 +16,7 @@ const auth = getAuth(app)
 function DecideCurrentPage() {
     const [user] = useAuthState(auth)
 
-    if (!
-        user) {
+    if (!user) {
         return <Navigate to="/login" />
     }
 
