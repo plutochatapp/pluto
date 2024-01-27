@@ -1,6 +1,8 @@
 import '../css/index.css'
+
 import { useState } from 'react'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa"
+import { Link } from 'react-router-dom'
 
 function Loginform() {
 
@@ -29,7 +31,7 @@ function Loginform() {
                 </form>
                 <div className='flex flex-row w-full mt-10'>
                     <p className='text-sm text-stone-300'>Don't have an account? </p>
-                    <a className='text-sm text-blue-700 ml-1 cursor-pointer hover:underline'>Sign Up!</a>
+                    <a className='text-sm text-blue-700 ml-1 cursor-pointer hover:underline'><Link to='/signup'>Sign Up!</Link></a>
                 </div>
             </div>
         </div>
