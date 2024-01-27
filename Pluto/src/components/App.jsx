@@ -1,12 +1,28 @@
 import { useEffect, useState } from 'react'
-import { Routes, Route, Navigate, useRoutes } from 'react-router-dom';
- 
-import Navbar from './Navbar.jsx'
-import Loginform from './Loginform.jsx';
+import { Routes, Route, Navigate, useRoutes } from 'react-router-dom'
 
+import { app } from '../firebase.js'
+
+import { getAuth } from 'firebase/auth'
+import { useAuthState } from 'react-firebase-hooks/auth'
+
+import Home from './Home.jsx'
+import Loginform from './Loginform.jsx'
+import Signupform from './Signupform.jsx'
+
+ 
+const auth = getAuth(app)
 
 function DecideCurrentPage() {
-    return <Navigate to='/login' />   
+    const [user] = useAuthState(auth)
+
+    if (!user) {
+        return <Navigate to="/login" />
+    }
+
+    else {
+        return <Home />
+    }
 }
 
 export default function App() {
@@ -16,11 +32,15 @@ export default function App() {
             children: [
                 {
                     index: true,
-                    element: <DecideCurrentPage />
+                    element: <DecideCurrentPage />,
                 },
                 {
                     path: 'login',
                     element: <Loginform />,
+                }, 
+                {
+                    path: 'signup',
+                    element: <Signupform />,
                 }
             ]
         }
