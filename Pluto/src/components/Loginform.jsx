@@ -1,18 +1,27 @@
 import '../css/index.css'
+import { app } from '../firebase'
 
+import { getAuth } from 'firebase/auth'
+// import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useState } from 'react'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa"
 import { Link } from 'react-router-dom'
-import GoogleButton from 'react-google-button'
+
+const auth = getAuth(app)
 
 function Loginform() {
 
     const [passwordShowing, setPasswordShowing] = useState(false)
 
-    const managePasswordFieldVisibility = () => {
-        if (!passwordShowing) {setPasswordShowing(true)}
-        if (passwordShowing) {setPasswordShowing(false)}
+    const manageSignInWithGoogle = () => {
+        const provider = new GoogleAuthProvider()
+        signInWithPopup(auth, provider).then()
     }
+
+    // const managePasswordFieldVisibility = () => {
+    //     if (!passwordShowing) {setPasswordShowing(true)}
+    //     if (passwordShowing) {setPasswordShowing(false)}
+    // }
 
     return (
         <div className="fixed top-0 left-0 w-full h-full bg-modal-backdrop-color">
@@ -30,7 +39,7 @@ function Loginform() {
                     </div>
                     <button className='bg-btn-color m-auto p-2 px-4 rounded-lg text-black font-inter-bold mb-4 hover:opacity-95'>Login</button>
                     <span className='text-stone-500 text-center m-auto mb-4 '>(Or)</span>
-                    <button className='bg-btn-color m-auto p-2 px-5 rounded-lg text-black font-inter-bold hover:opacity-95'>Sign in with Google</button>
+                    {/* <button className='bg-btn-color m-auto p-2 px-5 rounded-lg text-black font-inter-bold hover:opacity-95' onClick={manageSignInWithGoogle}>Sign in with Google</button> */}
                 </form>
                 <div className='flex flex-row w-full mt-10'>
                     <p className='text-sm text-stone-300'>Don't have an account? </p>
