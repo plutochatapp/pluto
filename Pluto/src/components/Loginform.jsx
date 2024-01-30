@@ -18,10 +18,10 @@ function Loginform() {
         signInWithPopup(auth, provider).then()
     }
 
-    // const managePasswordFieldVisibility = () => {
-    //     if (!passwordShowing) {setPasswordShowing(true)}
-    //     if (passwordShowing) {setPasswordShowing(false)}
-    // }
+    const managePasswordFieldVisibility = () => {
+        if (!passwordShowing) {setPasswordShowing(true)}
+        if (passwordShowing) {setPasswordShowing(false)}
+    }
 
     return (
         <div className="fixed top-0 left-0 w-full h-full bg-modal-backdrop-color">
