@@ -13,10 +13,10 @@ function Loginform() {
 
     const [passwordShowing, setPasswordShowing] = useState(false)
 
-    const manageSignInWithGoogle = () => {
-        const provider = new GoogleAuthProvider()
-        signInWithPopup(auth, provider).then()
-    }
+    // const manageSignInWithGoogle = () => {
+    //     const provider = new GoogleAuthProvider()
+    //     signInWithPopup(auth, provider).then()
+    // }
 
     const managePasswordFieldVisibility = () => {
         if (!passwordShowing) {setPasswordShowing(true)}
