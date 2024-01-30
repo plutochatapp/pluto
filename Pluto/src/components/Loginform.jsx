@@ -3,6 +3,7 @@ import '../css/index.css'
 import { useState } from 'react'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa"
 import { Link } from 'react-router-dom'
+import GoogleButton from 'react-google-button'
 
 function Loginform() {
 
@@ -27,7 +28,9 @@ function Loginform() {
                             {passwordShowing ? <FaRegEyeSlash className='text-stone-500' /> : <FaRegEye className='text-stone-500' />}
                         </span>
                     </div>
-                    <button className='bg-btn-color m-auto p-2 px-4 rounded-lg text-black font-inter-bold hover:opacity-95'>Login</button>
+                    <button className='bg-btn-color m-auto p-2 px-4 rounded-lg text-black font-inter-bold mb-4 hover:opacity-95'>Login</button>
+                    <span className='text-stone-500 text-center m-auto mb-4 '>(Or)</span>
+                    <button className='bg-btn-color m-auto p-2 px-5 rounded-lg text-black font-inter-bold hover:opacity-95'>Sign in with Google</button>
                 </form>
                 <div className='flex flex-row w-full mt-10'>
                     <p className='text-sm text-stone-300'>Don't have an account? </p>
