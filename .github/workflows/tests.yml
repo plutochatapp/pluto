@@ -1,0 +1,17 @@
+name: Testing Frontend Test Cases
+on: 
+  push:
+    branches: [main, beta]
+  pull_request:
+    branches: [main, beta]
+
+jobs: 
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node_version: 20
+    - run: npm ci
+    - run: npm run test
