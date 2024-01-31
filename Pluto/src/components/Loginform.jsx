@@ -1,17 +1,35 @@
 import '../css/index.css'
-import { app } from '../firebase'
+import { app, auth } from '../firebase'
 
-import { getAuth } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 // import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useState } from 'react'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa"
 import { Link } from 'react-router-dom'
 
-const auth = getAuth(app)
+
+// createUserWithEmailAndPassword(auth, "dummyemail@email.com", "dummypassword")
+// .then((userCredential) => {
+//     const user = userCredential.user;
+//     console.log(user)
+// })
+// .catch((error) => {throw error})
 
 function Loginform() {
 
     const [passwordShowing, setPasswordShowing] = useState(false)
+
+    const loginUser = (e) => {
+        e.preventDefault()
+        const email = document.getElementById('email-input');
+        const password = document.getElementById('password-input');
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(`Logged in as ${user.displayName}`)
+        })
+        .catch((error) => {throw error})
+    }
 
     // const manageSignInWithGoogle = () => {
     //     const provider = new GoogleAuthProvider()
@@ -37,8 +55,8 @@ function Loginform() {
                             {passwordShowing ? <FaRegEyeSlash className='text-stone-500' /> : <FaRegEye className='text-stone-500' />}
                         </span>
                     </div>
-                    <button className='bg-btn-color m-auto p-2 px-4 rounded-lg text-black font-inter-bold mb-4 hover:opacity-95'>Login</button>
-                    <span className='text-stone-500 text-center m-auto mb-4 '>(Or)</span>
+                    <button type="button" className='bg-btn-color m-auto p-2 px-4 rounded-lg text-black font-inter-bold hover:opacity-95' onClick={loginUser}>Login</button>
+                    {/* <span className='text-stone-500 text-center m-auto mb-4 '>(Or)</span> */}
                     {/* <button className='bg-btn-color m-auto p-2 px-5 rounded-lg text-black font-inter-bold hover:opacity-95' onClick={manageSignInWithGoogle}>Sign in with Google</button> */}
                 </form>
                 <div className='flex flex-row w-full mt-10'>

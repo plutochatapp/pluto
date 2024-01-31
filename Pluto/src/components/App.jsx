@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Navigate, useRoutes } from 'react-router-dom'
 
-import { app } from '../firebase.js'
+import { app, auth } from '../firebase.js'
 
-import { getAuth } from 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 
 import Home from './Home.jsx'
@@ -11,7 +10,6 @@ import Loginform from './Loginform.jsx'
 import Signupform from './Signupform.jsx'
 
  
-const auth = getAuth(app)
 
 function DecideCurrentPage() {
     const [user] = useAuthState(auth)
